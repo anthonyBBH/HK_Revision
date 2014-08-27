@@ -79,7 +79,14 @@
 }
 
 
-
+#first {
+  width: 960px; height: 540px;
+  background-image: url('http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0000_mini.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow:hidden;
+  margin:0 auto;
+}
 
 /*Module One*/
 
@@ -91,10 +98,10 @@
 }
 
 #intro_cta {
-  width: 314px;
+  width: 359px;
   height: 46px;
-  margin: 0 0 0 -157px;
-  padding: 0 25px;
+  margin: 0 0 0 -179.5px;
+  padding: 0 0 0 0px;
   left:50%;
   top:67%;
   border: #ffffff 2px solid;
@@ -109,7 +116,7 @@
   color: #ffffff;
   font-weight: 800;
   line-height: 46px;
-  text-align: left;
+  text-align: center;
   float: left;
   font-size: 0.6em;
 }
@@ -130,7 +137,7 @@
 .wifi_btn{
   float: left;
   padding: 0;
-  margin: 12px 10px 0 0;
+  margin: 12px 10px 0 40px;
 }
 
 
@@ -230,8 +237,27 @@ height: auto!important;
   display: none;
 }
 
+.youtube_video2{
+  margin: 0px 0 0 0;
+  float: right;
+  display: none;
+}
+
+.youtube_video3{
+  width: 720px;
+  margin: 0 auto;
+  display: none;
+}
 
 
+.youtube_video3 a{
+  color:blue;
+  position: absolute;
+  z-index: 10;
+  top:0;
+  right: 150px;
+  cursor: pointer;
+}
 
 
 /*Module Three*/
@@ -537,7 +563,6 @@ h2.resp-accordion:first-child {
 
 
 .price{
-  margin-top: 20px;
 }
 
 #horizontalTab{
@@ -862,19 +887,21 @@ h2.resp-accordion:first-child {
 #m8_header {
   width: 100%;
   height: 60px;
-  padding: 40px 0 10px 0;
+  padding: 40px 0 10px 0px;
   text-align: center;
 }
 
 #m8_header h1{
   font-family: 'HelveticaNeueW01-UltLt';
+  color:#858585;
+  letter-spacing: 0.8px;
 }
 
 #question_q {
   width: 40px;
   height: 40px;
   float: left;
-  margin: 18px 0 0 0px;
+  margin: 28px 0 0 60px;
   border-right: solid #000 1px;
   line-height: 38px;
   font-size: 30px;
@@ -890,16 +917,7 @@ h2.resp-accordion:first-child {
   float: left;
   padding: 12px 0 0 20px;
   color: #000;
-}
 
-
-
-#questions_1 h5{
-  margin: 10px 0;
-}
-
-#questions_2 h5{
-  margin: 10px 0;
 }
 
 
@@ -913,14 +931,15 @@ h2.resp-accordion:first-child {
 
 }
 #questions_wrapper {
-  max-width: 1200px;
+  max-width: 1150px;
   width: 100%;
   height: 300px;
   margin: 0 auto;
+  padding: 0 0 0 100px;
 }
 
 #questions_wrapper p {
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .hk_module_inner_m8 .support_cta {
@@ -936,7 +955,7 @@ h2.resp-accordion:first-child {
   display: block;
   padding: 0;
   margin: 0;
-  line-height: 30px;
+  line-height: 45px;
   color: #939598;
   font-weight: 900;
 }

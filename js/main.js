@@ -3,6 +3,9 @@
 
 
 $(document).ready(function(){
+
+
+
   $('.flexslider').flexslider({
     animation: "slide"
   });
@@ -36,10 +39,23 @@ $('div.demo-show> div').hide();
     return false;
     });
 
-    $("#sts_play_btn").click(function(){
-        console.log('foo');
-        $(".slider").hide('500');
-        $(".youtube_video").show('500');
-    });
+
+     $("#sts_play_btn_1").click(function(){
+            $(".youtube_video").slideToggle();
+            return false;
+                         }); 
+
+     $("#sts_play_btn_2").click(function(){
+            $(".youtube_video2").slideToggle();
+            return false;
+                         }); 
+
+
+     $("#sts_play_btn_3, .youtube_video3").click(function(){
+        console.log('hit');
+            $(".youtube_video3").slideToggle();
+            return false;
+                         }); 
+
 });
 

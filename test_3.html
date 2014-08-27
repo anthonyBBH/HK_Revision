@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>HK/BETA</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+    <link rel="stylesheet" href="stylesheets/tablet_layout.css">
+    <link rel="stylesheet" href="stylesheets/mobile_layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/">
+
+	<!-- Front Loading Scripts
+	================================================== -->
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/Xjavascript-video-scrubber.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+    // store the div container element reference
+var container = document.getElementById('first');
+// houses the dynamically loaded images
+var images = new Array();
+
+
+// list of the images that will be loaded dynamically
+var imageFiles = new Array(
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0000_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0001_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0002_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0003_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0004_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0005_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0006_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0007_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0008_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0009_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0010_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0011_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0012_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0013_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0014_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0015_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0016_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0017_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0018_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0019_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0020_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0021_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0022_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0023_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0024_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0025_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0026_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0027_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0028_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0029_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0030_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0031_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0032_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0033_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0034_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0035_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0036_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0037_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0038_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0039_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0040_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0041_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0042_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0043_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0044_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0045_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0046_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0047_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0048_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0049_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0050_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0051_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0052_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0053_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0054_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0055_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0056_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0057_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0058_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0059_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0060_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0061_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0062_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0063_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0064_mini.jpg',
+    'http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0065_mini.jpg'
+);
+
+// max images from the array of image file names
+var maxImages = imageFiles.length;
+
+// the image count, to track where we are in the images array
+var imageCount = 0;
+
+// the frames per second
+var fps = 14;
+
+// the interval calculated to the proper ms delay based on fps
+var interval = Math.round(1000 / fps);
+
+// main init function
+function init(){
+    var i;
+    var img = null;
+    for(i = 0; i < maxImages; i++){
+        // new image created, overwrites previous image within the for loop
+        img = new Image();
+    
+        // set the src attribute path to the image file names in the for loop
+        img.src = imageFiles[i];
+    
+        // if last array index, set onload complete handler
+        if(i == (maxImages - 1)){
+            img.onload = imagesLoaded;
+        }
+    
+        // store the image object to the images array
+        images.push(img);
+    }
+  
+
+}
+
+// this essentially starts our loaded sequence for the first time and sets the first image
+function imagesLoaded(evt){
+    container.appendChild(images[imageCount]);
+    startTimeout();
+}
+
+// this essentially cycles through the array of images and swaps out the current image for the next image
+function nextImage(){
+    container.removeChild(container.firstChild);
+    imageCount++;
+  if(imageCount == (maxImages - 1)){
+        imageCount = 65;
+    }
+    container.appendChild(images[imageCount]);
+    startTimeout();
+}
+
+// wrapper for the interval timeout so we only declare once here
+function startTimeout(){
+    setTimeout('nextImage()', interval);
+}
+
+
+// get it all started
+init();
+
+});
+
+</script>
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<div class="container">
+
+		       <div class="m1 first" id="first"  onload="resizeAdjustments();" onresize="resizeAdjustments();" onorientationchange="resizeAdjustments();">
+      
+
+                <img id="video" src="http://bbhgraze.com/production/harmankardon_aug/testSEQ/png0065_mini.jpg" alt="" />
+
+                </div><!--m1-->
+
+
+
+                </div><!--m1-->
+
+
+    <div class="clear"></div>
+
+
+
+	</div><!-- container -->
+
+    <!-- preload the video frames (required) -->
+    <script type="text/javascript">
+        <!--//
+        // image filenames in frames folder should be "image_000000.jpg" through "image_000098.jpg"
+        for(i = 0; i < totalFrames; i++) { // loop for each image in sequence
+            images[i] =  new Image(); // add image object to array
+            images[i].src = "./pngSEQ/hk_header_"+pad(i, 5)+".png"; // set the source of the image object
+        }
+
+
+        // for(x = 0; x < totalFrames2; x++) { 
+        //     images2[x] =  new Image(); 
+        //     images2[x].src = "./pngSEQ2/hk_header2_"+pad(x, 5)+".png"; 
+        // }
+    </script>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+	  	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+	    <script type="text/javascript" src="js/easyResponsiveTabs.js"></script>
+        <script type="text/javascript" src="http://fast.fonts.net/jsapi/c1c8c246-f8e8-4e5d-996c-340b00c10a7d.js"></script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
