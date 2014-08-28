@@ -11,6 +11,7 @@ body {
 	margin: 0 auto;
 	overflow-x: hidden;
 	font-family: "Helvetica Neue", Arial, sans-serif;
+	padding-bottom: 0;
 }
 p {
 	font-family: "Helvetica Neue", Arial, sans-serif !important;
@@ -22,6 +23,13 @@ h3.lighter {
 	line-height: 45px;
 	color: rgb(133, 133, 133);
 	letter-spacing: 2px;
+}
+
+.lighter.center {
+	text-align: center;
+	font-size: 2.3em;
+	font-weight: 100;
+
 }
 
 p.basic {
@@ -51,7 +59,7 @@ p.light {
 }
 
 .play_border {
-margin: 0 22px 0 5px;
+margin: 0 22px 0 20px;
 border: 2px solid rgb(8, 177, 137);
 -webkit-border-radius: 100%;
 -moz-border-radius: 100%;
@@ -78,7 +86,7 @@ border-left: 10px solid rgb(255, 255, 255);
 
 .play_button {
 position: relative;
-top: 10px;
+top: 8px;
 left: 40%;
 width: 0;
 height: 0;
@@ -88,6 +96,11 @@ border-left: 10px solid rgb(8, 177, 137);
 }
 .m1.first {
 	height: inherit !important;
+}
+
+img.ipad {
+	position: relative;
+	right: 0;
 }
 
 .wifi {
@@ -125,43 +138,167 @@ margin-top: 30vw;
 .carousel {
 	margin-bottom: 0;
 }
-.nav-tabs {
+
+.nav-bk {
 	clear: both;
 	overflow: auto;
 	background-color: rgb(28, 28, 27);
 }
+.nav-tabs {
+	
+	clear: both;
+overflow: auto;
+margin: 0 auto;
+width: 100%;
+max-width: 700px;
+border-bottom: none;
+}
+
+.nav-tabs > li {
+	padding: 20px;
+}
 
 .nav-tabs > li > a {
 	color: rgb(133, 133, 133);
-	font-size: 1.5em;
+	font-size: 1.2em;
+	border-radius: 0;
+	border-top: none;
+	border-left: none;
+	border-right: none;
 }
 
+.nav-tabs > li.active {
 
+}
 .nav-tabs > li.active > a {
 	border-bottom: 4px solid rgb(0, 160, 226);
 	background: transparent;
 	color: rgb(133, 133, 133);
+	border-radius: 0;
+	border-top: none;
+	border-left: none;
+	border-right: none;
  }
+
+.tab-content {
+	position: relative;
+
+}
 .tab-pane {
 	height: 500px;
+}
+
+.border.pane {
+	border-left: 1 solid rgb(240,240,240);
+	padding-left: 20px;
+	margin-bottom: 0px;
+	margin-top: 80px;
+	padding-bottom: 20px;
+	
+}
+
+.border.pane h3 {
+	color: rgb(0, 161, 227);
+font-size: 2.8em;
+font-weight: 200;
+}
+
+.border.pane p {
+	color: white;
+	line-height: 22px;
+}
+
+.content.pane {
+	max-width: 330px;
+	margin: 0 auto;
+}
+
+.shop_now {
+	background: rgb(0, 161, 227);
+	border-radius: 5px;
+	color: white;
+	text-transform: uppercase;
+	margin: 30px 0 0 20px;
+
+}
+
+ .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+	background: transparent;
+	border-radius: 0;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 4px solid rgb(0, 160, 226);
+}
+
+
+ .nav-tabs>li>a:hover, .nav-tabs>li>a:focus {
+	background: transparent;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+
+}
+
+.panel-default {
+	border: none;
+}
+
+.panel-group .panel+.panel {
+margin-top: 0px;
+}
+
+.panel-default>.panel-heading {
+	border: none;
+	background: transparent;
+	line-height: 45px;
+color: rgb(147, 149, 152);
+padding: 10px 0px;
+}
+
+.panel-default>.panel-heading> h4 {
+	font-weight: 300;
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+	border: none;
+	background: rgb(243, 243, 243);
+	color: rgb(0, 0, 0);
 }
 
 .omni10 {
 
 background: url('../images/products/product_images_0003_10.png') no-repeat;
-background-size: 100%;
-background-position: 0% 0%;
+background-size: cover;
+background-position: center center;
 
 }
 
 .omni20 {
 
 background: url('../images/products/product_images_0004_20.png') no-repeat;
-background-size: 100%;
-background-position: 0% 0%;
+background-size: cover;
+background-position: center center;
 
 }
 
+.aura {
+background:	url('../images/products/product_images_0001_aura.png') no-repeat;
+background-size: cover;
+background-position: center center;
+}
+
+.onyx {
+background: url('../images/products/product_images_0002_onyx.png') no-repeat;
+background-size: cover;
+background-position: center center;
+}
+
+.adapt {
+background: url('../images/products/product_images_0000_adapt.png') no-repeat;
+background-size: cover;
+background-position: center center;
+}
 .m1.first.second {
 	height: 450px !important;
 overflow: hidden;
@@ -170,23 +307,52 @@ overflow: hidden;
 
 .music {
 	background: url(../images/keyframe.png) no-repeat;
-	background-size: 100%;
-background-position: 0% 0%;
+	background-size: cover;
+background-position: center center;
 height: 450px;
 }
 
+.music-button > div {
+	margin-top: 20vw;
+}
 
+.music-contain {
+	max-width: 420px;
+margin: 0 auto;
+}
+
+.music-contain h2 {
+	margin: 12px 0 2px 0;
+	font-weight: 200;
+}
 .m-stop {
 	border: rgb(255, 255, 255) 2px solid;
 color: rgb(255, 255, 255);
 padding: 0 20px;
 }
 
+.setups {
+	text-align: center;
+}
+.support {
+	color: rgb(0, 161, 227);
+	text-align: center;
+	padding: 30px 0 40px 0
+}
+
+.support.help {
+	font-size: 1.5em;
+	font-weight: 200;
+}
+
+a:hover {
+	text-decoration: none;
+}
 
 .m8 {
 	background: url(../images/ambient1.png) no-repeat;
-		background-size: 100%;
-background-position: 0% 0%;
+		background-size: cover;
+background-position: center center;
 height: 450px;
 }
 
@@ -200,7 +366,7 @@ height: 450px;
 
 .m9 {
 	background: url(../images/ambient_2.png) no-repeat;
-		background-size: 100%;
-background-position: 0% 0%;
+		background-size: cover;
+background-position: center center;
 height: 450px;
 }
